@@ -1,4 +1,4 @@
-package com.example.foddieapp;
+package com.example.foddieapp.order;
 
 public enum OrderStatus {
     NEW,

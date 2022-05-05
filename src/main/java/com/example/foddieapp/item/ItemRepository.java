@@ -1,4 +1,4 @@
-package com.example.foddieapp;
+package com.example.foddieapp.item;
 
 import org.springframework.data.repository.CrudRepository;
 

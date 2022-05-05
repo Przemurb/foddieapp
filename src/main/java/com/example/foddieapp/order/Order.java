@@ -1,5 +1,6 @@
-package com.example.foddieapp;
+package com.example.foddieapp.order;
 
+import com.example.foddieapp.item.Item;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
