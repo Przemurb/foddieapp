@@ -1,4 +1,4 @@
-package com.example.foddieapp.controllers;
+package com.example.foddieapp.home;
 
 import com.example.foddieapp.item.Item;
 import com.example.foddieapp.item.ItemRepository;
