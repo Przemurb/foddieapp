@@ -19,4 +19,5 @@ public class Item {
     @Column(length = 1024)
     private String description;
     private double price;
+    private String imageUrl;
 }
