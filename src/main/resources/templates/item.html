@@ -2,8 +2,8 @@
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Nazwa dania</title>
-    <link rel="stylesheet" href="../static/css/main.css" th:href="@{css/main.css}">
+    <title th:text="${item.name}">Nazwa dania</title>
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
     <!-- Font Awesome css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <!-- BootStrap css -->
@@ -16,11 +16,11 @@
 <main class="row g-0">
     <div class="container">
         <div class="col-lg-8 offset-lg-2">
-            <img class="image" src="../static/img/pizza-margherita.jpg" alt="Pizza Margherita">
+            <img class="image" src="../static/img/pizza-margherita.jpg" th:src="${item.imageUrl}" alt="Pizza Margherita">
             <div class="shadow-lg p-3 mb-5 bg-white rounded">
-                <h1 class="text-center">Pizza Margherita</h1>
-                <h3 class="text-center">Cena: 30 zł</h3>
-                <p class="text-justify">Pizza supersmaczna i takie tam bla bla bla...</p>
+                <h1 class="text-center" th:text="${item.name}">Pizza Margherita</h1>
+                <h3 class="text-center" th:text="|Cena: ${#numbers.formatDecimal(item.price, 0 ,2)} zł|">Cena: 30 zł</h3>
+                <p class="text-justify" th:text="${item.description}">Pizza supersmaczna i takie tam bla bla bla...</p>
             </div>
         </div>
     </div>

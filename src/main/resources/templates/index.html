@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Strona główna</title>
-    <link rel="stylesheet" href="../static/css/main.css" th:href="@{css/main.css}">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
     <!-- Font Awesome css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <!-- BootStrap css -->
@@ -25,37 +25,47 @@
     </div>
 </header>
 
-<main  th:remove="all-but-first">
+<main th:remove="all-but-first">
     <div class="row g-0" th:each="item:${items}">
         <div class="col-md-4">
             <i class="fa-solid fa-bowl-rice"></i>
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title" th:text="|${item.name} - ${#numbers.formatDecimal(item.price, 0, 2)} zł|">Zupa grzybowa - 12 zł</h5>
-                <p class="card-text" th:text="${item.shortDescription}">Krótki opis: Bardzo smaczna zupa grzybowa.</p>
+                <a class="text-decoration-none text-reset" href="#" th:href="|/danie/${item.name.replaceAll(' ', '-')}|">
+                    <h5 class="card-title" th:text="|${item.name} - ${#numbers.formatDecimal(item.price, 0, 2)} zł|">
+                        Zupa grzybowa - 12 zł</h5>
+                    <p class="card-text" th:text="${item.shortDescription}">Krótki opis: Bardzo smaczna zupa
+                        grzybowa.</p>
+                </a>
             </div>
         </div>
     </div>
+
     <div class="row g-0">
         <div class="col-md-4">
             <i class="fa-solid fa-bowl-rice"></i>
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">Zupa grzybowa - 12 zł</h5>
-                <p class="card-text">Krótki opis: Bardzo smaczna zupa grzybowa.</p>
+                <a class="text-decoration-none text-reset" href="#">
+                    <h5 class="card-title">Zupa grzybowa - 12 zł</h5>
+                    <p class="card-text">Krótki opis: Bardzo smaczna zupa grzybowa.</p>
+                </a>
             </div>
         </div>
     </div>
+
     <div class="row g-0">
         <div class="col-md-4">
             <i class="fa-solid fa-bowl-rice"></i>
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">Zupa grzybowa - 12 zł</h5>
-                <p class="card-text">Krótki opis: Bardzo smaczna zupa grzybowa.</p>
+                <a class="text-decoration-none text-reset" href="#">
+                    <h5 class="card-title">Zupa grzybowa - 12 zł</h5>
+                    <p class="card-text">Krótki opis: Bardzo smaczna zupa grzybowa.</p>
+                </a>
             </div>
         </div>
     </div>
