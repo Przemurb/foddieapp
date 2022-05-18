@@ -21,6 +21,8 @@
             <p class="col-md-8 fs-3">Witaj w naszej "jadłodajni", gdzie możesz zamówić pyszne jedzonko z dowozem prosto
                 do twojego domu!</p>
             <img class="image" src="../static/img/background.webp" th:src="@{/img/background.webp}">
+            <a href="#" th:href="@{/zamowienie}" type="button" class="btn btn-outline-primary btn-lg float-end">
+                Twoje zamówienie</a>
         </div>
     </div>
 </header>
@@ -32,13 +34,16 @@
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <a class="text-decoration-none text-reset" href="#" th:href="|/danie/${item.name.replaceAll(' ', '-')}|">
+                <a class="text-decoration-none text-reset" href="#"
+                   th:href="|/danie/${item.name.replaceAll(' ', '-')}|">
                     <h5 class="card-title" th:text="|${item.name} - ${#numbers.formatDecimal(item.price, 0, 2)} zł|">
                         Zupa grzybowa - 12 zł</h5>
                     <p class="card-text" th:text="${item.shortDescription}">Krótki opis: Bardzo smaczna zupa
                         grzybowa.</p>
                 </a>
-                <button type="submit" class="btn btn-primary btn-sm">Dodaj do zamówienia</button>
+                <a type="button" href="#" th:href="@{/zamowinie/dodaj(itemId=${item.id})}"
+                   class="btn btn-primary btn-sm">
+                    Dodaj do zamówienia</a>
             </div>
         </div>
     </div>
