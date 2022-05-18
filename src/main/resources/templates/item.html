@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <title th:text="${item.name}">Nazwa dania</title>
     <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}">
-    <!-- Font Awesome css -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <!-- BootStrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -16,12 +14,18 @@
 <main class="row g-0">
     <div class="container">
         <div class="col-lg-8 offset-lg-2">
-            <img class="image" src="../static/img/pizza-margherita.jpg" th:src="${item.imageUrl}" alt="Pizza Margherita">
+            <img class="image" src="../static/img/pizza-margherita.jpg" th:src="${item.imageUrl}"
+                 alt="Pizza Margherita">
             <div class="shadow-lg p-3 mb-5 bg-white rounded">
                 <h1 class="text-center" th:text="${item.name}">Pizza Margherita</h1>
-                <h3 class="text-center" th:text="|Cena: ${#numbers.formatDecimal(item.price, 0 ,2)} zł|">Cena: 30 zł</h3>
+                <h3 class="text-center" th:text="|Cena: ${#numbers.formatDecimal(item.price, 0 ,2)} zł|">Cena: 30
+                    zł</h3>
                 <p class="text-justify" th:text="${item.description}">Pizza supersmaczna i takie tam bla bla bla...</p>
+                <button type="submit" value="Submit" class="btn btn-primary btn-lg btn-block">Dodaj do zamówienia</button>
+                <a type="link" href="#" th:href="@{/}" role="button" class="btn btn-secondary btn-lg btn-block">
+                    Powrót do strony głównej</a>
             </div>
+
         </div>
     </div>
 </main>

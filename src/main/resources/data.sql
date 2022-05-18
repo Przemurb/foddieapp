@@ -14,7 +14,8 @@ VALUES (1, 22.50, 'Pizza Margherita', 'Włoska pizza na cienkim cieście z serem
         'Masz ochotę na coś słodkiego? Ta propozycja to nasza interpretacja jednego z najbardziej rozpoznawalnych włoskich' ||
         'deserów. Przygotowujemy go ze śmietanki BIO, świeżego mleka i prawdziwej wanilii. Na życzenie deser podajemy ' ||
         'w alternatywnej wersji z sosem czekoladowym.', '/img/panna-cotta.jpg'),
-       (5, 21.30, 'Ciasto kremówka', 'Pyszne ciastko kremowe', 'Pyszne ciastko z nadzieniem budyniowym o smaku waniliowym',
+       (5, 21.30, 'Ciasto kremówka', 'Pyszne ciastko kremowe', 'Pyszne ciastko z nadzieniem budyniowym o smaku waniliowym. ' ||
+        'Całość pieknie "opakowana" w kruche ciasto francuskie.',
         '/img/kremowka.jpg');
 
 INSERT INTO client_order(id, address, telephone, status)
