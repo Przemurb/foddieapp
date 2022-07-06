@@ -18,13 +18,13 @@ VALUES (1, 22.50, 'Pizza Margherita', 'Włoska pizza na cienkim cieście z serem
         'Całość pieknie "opakowana" w kruche ciasto francuskie.',
         '/img/kremowka.jpg');
 
-INSERT INTO client_order(id, address, telephone, status)
-VALUES (1, 'Zakrzewskiego 23/5, 50-225 Wrocław', '888777666', 'NEW'),
-       (2, 'Kościuszki 13, 52-316 Wrocław', '767454989', 'NEW'),
-       (3, 'Krakowska 88/16, 51-515 Wrocław', '666234123', 'IN_PROGRESS'),
-       (4, 'Centralna 8/12, 55-100 Wrocław', '598787999', 'IN_PROGRESS'),
-       (5, 'Dworcowa 33, 51-200 Wrocław', '600700900', 'COMPLETE'),
-       (6, 'Krucza 66/4, 53-300 Wrocław', '696787898', 'COMPLETE');
+INSERT INTO client_order(id, name, address, telephone, status)
+VALUES (1, 'Jan janowski','Zakrzewskiego 23/5, 50-225 Wrocław', '888777666', 'NEW'),
+       (2, 'Zofia Zofialska','Kościuszki 13, 52-316 Wrocław', '767454989', 'NEW'),
+       (3, 'Katarzyna Kasińska','Krakowska 88/16, 51-515 Wrocław', '666234123', 'IN_PROGRESS'),
+       (4, 'Adam Adamczyk','Centralna 8/12, 55-100 Wrocław', '598787999', 'IN_PROGRESS'),
+       (5, 'Paweł Pawłowski','Dworcowa 33, 51-200 Wrocław', '600700900', 'COMPLETE'),
+       (6, 'Anna Annowska','Krucza 66/4, 53-300 Wrocław', '696787898', 'COMPLETE');
 
 INSERT INTO order_item(order_id, item_id)
 VALUES (1, 1),
