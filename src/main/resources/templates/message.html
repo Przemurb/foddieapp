@@ -19,17 +19,21 @@
         <div class="container-fluid py-7">
             <div th:if="${message}" th:remove="tag">
                 <h1 th:text="${message.title}" class="display-5 fw-bold">Dodano zamówienie!</h1>
-                <p th:text="${message.description}" class="col-md-8 fs-3">Do zamówienia dodano: Pizza Margherita</p>
             </div>
-            <img class="image" src="../static/img/background.webp" th:src="@{/img/background.webp}">
+<!--            <div th:if="!${message}" th:remove="tag">-->
+<!--                <h1 class="display-3">Sukces</h1>-->
+<!--                <p th:text="${message}" class="col-md-8 fs-3">Wszystko poszło zgodnie z planem. Hurra!</p>-->
+<!--            </div>-->
+            <img class="image" src="../static/img/background.webp" th:src="@{/img/background.webp}" alt="Potrawy">
 
         </div>
+        <p th:text="${message.description}" class="col-md-8 fs-3">Do zamówienia dodano: Pizza Margherita</p>
+
         <div class="d-grid gap-2">
-            <a type="link" href="#" th:href="@{/}" role="button" class="btn btn-secondary btn-lg btn-block">
+            <a href="#" th:href="@{/}" type="button" class="btn btn-secondary btn-lg btn-block">
             Powrót do strony głównej</a>
             <a href="#" th:href="@{/zamowienie}" type="button" class="btn btn-outline-primary btn-lg float-end">
             Podsumowanie Twoich zamówień</a>
-
         </div>
     </div>
 </header>
