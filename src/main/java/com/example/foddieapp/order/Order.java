@@ -23,8 +23,10 @@ public class Order {
             joinColumns = @JoinColumn(name = "order_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id"))
     private List<Item> items = new ArrayList<>();
+    private String name;
     private String address;
     private String telephone;
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
 }
