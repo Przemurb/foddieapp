@@ -96,11 +96,17 @@
                 <td th:case="${T(com.example.foddieapp.order.OrderStatus).COMPLETE}">ZAKOŃCZONE</td>
             </h3>
         </div>
-        <div>
-            <form method="post">
 
+        <div class="text-center" th:if="${order.status != T(com.example.foddieapp.order.OrderStatus).COMPLETE}">
+            <form method="post" action="#" th:action="@{|/panel/zamowienie/${order.id}|}">
+                <button class="btn btn-warning btn-lg"
+                        th:if="${order.status==T(com.example.foddieapp.order.OrderStatus).NEW}">Realizuj
+                </button>
+                <button class="btn btn-primary btn-lg"
+                        th:if="${order.status==T(com.example.foddieapp.order.OrderStatus).IN_PROGRESS}">Zakończ</button>
             </form>
         </div>
+
         <div class="text-center">
             <a href="#" th:href="@{/panel/zamowienia}">Powrót do listy zamówień</a>
         </div>
