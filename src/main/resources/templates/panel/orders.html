@@ -15,7 +15,7 @@
 <header>
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-7">
-            <h1 class="display-5 fw-bold">ZAMÓWIENIA</h1>
+            <h1 class="display-5 fw-bold">LISTA ZAMÓWIEŃ</h1>
             <p class="col-md-8 fs-3">Poniżej znajduje się lista zamówień.</p>
             <img class="image" src="../../static/img/background.webp" th:src="@{/img/background.webp}"
                  alt="Dania obiadowe">
@@ -61,7 +61,8 @@
                         <td th:case="${T(com.example.foddieapp.order.OrderStatus).COMPLETE}">Zakończone</td>
                     </th:block>
                     <td>
-                        <a href="#" type="button" class="btn btn-outline-primary float-end">
+                        <a href="#" th:href="@{|/panel/zamowienie/${order.id}|}" type="button"
+                           class="btn btn-outline-primary float-end">
                             edycja</a>
                     </td>
                 </tr>
